@@ -1,28 +1,31 @@
-import { useState } from "react"
+import { useState } from "react";
+import PropTypes from "prop-types";
 
 export const AddCategory = ({ onNewCategory }) => {
 
-  const [ inputValue, setInputValue ] = useState('Ragna Crimson')
+  console.log(onNewCategory);
+
+  const [inputValue, setInputValue] = useState('Ragna Crimson');
 
   const onInputChange = ({ target }) => {
-    setInputValue(target.value)
-  }
+    setInputValue(target.value);
+  };
 
   const onFormSubmit = (e) => {
     e.preventDefault();
 
     // Validation
-    if( inputValue.trim().length <= 0 ) {
+    if (inputValue.trim().length <= 0) {
       return;
-    }
+    };
 
     onNewCategory(inputValue);
 
     // Clear
     setInputValue('');
-  }
+  };
 
-  return(
+  return (
     <form onSubmit={ onFormSubmit }>
       <input 
         type="search"
@@ -31,5 +34,9 @@ export const AddCategory = ({ onNewCategory }) => {
         onChange={ onInputChange }
       />
     </form>
-  )
-}
+  );
+};
+
+AddCategory.propTypes = {
+  onNewCategory: PropTypes.func
+};
