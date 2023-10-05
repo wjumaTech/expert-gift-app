@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 
 export const AddCategory = ({ onNewCategory }) => {
 
-  console.log(onNewCategory);
-
   const [inputValue, setInputValue] = useState('Ragna Crimson');
 
   const onInputChange = ({ target }) => {
@@ -13,15 +11,10 @@ export const AddCategory = ({ onNewCategory }) => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-
-    // Validation
     if (inputValue.trim().length <= 0) {
       return;
     };
-
     onNewCategory(inputValue);
-
-    // Clear
     setInputValue('');
   };
 
