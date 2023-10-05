@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-import { AddCategory } from "./components/add-category/add-category.component";
-import { GiftGrid } from './components/gift-grid/gift-grid.component';
+import { AddCategory, GiftGrid } from "./components";
 
 import './GiftExpertApp.css';
 

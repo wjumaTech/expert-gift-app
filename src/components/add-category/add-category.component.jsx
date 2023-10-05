@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const AddCategory = ({ onNewCategory }) => {
 
-  const [inputValue, setInputValue] = useState('Ragna Crimson');
+  const [inputValue, setInputValue] = useState('');
 
   const onInputChange = ({ target }) => {
     setInputValue(target.value);
