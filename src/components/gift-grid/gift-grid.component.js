@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 
 import { useFetchGift } from '../../hooks';
 
+import { Card } from '../../components';
+
 export const GiftGrid = ({ category }) => {
 
   const { images, isLoading } = useFetchGift(category);
@@ -18,13 +20,11 @@ export const GiftGrid = ({ category }) => {
       {
         images.map(img => {
           return <div className="col-xs-6 col-sm-4 col-md-4 col-lg-3"  key={img.id}>
-                    <div className="card mb-3">
-                      <img src={img.image} />
-                      <div className="card-body">
-                        <h3 className="card-title">{img.title}</h3>
-                        <p className="card-text">{img.id}</p>
-                      </div>
-                    </div>
+                    <Card 
+                      id={img.id} 
+                      image={img.image} 
+                      title={img.title} 
+                    />
                   </div>;
         })
       }
