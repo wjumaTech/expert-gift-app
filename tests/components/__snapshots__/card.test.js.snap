@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Probando el CARD COMPONENT Debe de hacer match con el SNAPSHOT 1`] = `
+<div>
+  <div
+    class="card mb-3"
+  >
+    <img
+      alt="saitama"
+      src="https://one-punch/saitama.jpg"
+    />
+    <div
+      class="card-body"
+    >
+      <h3
+        class="card-title"
+      >
+        saitama
+      </h3>
+      <p
+        class="card-text"
+      >
+        asaddrwdfsdsd
+      </p>
+    </div>
+  </div>
+</div>
+`;
